@@ -12,7 +12,7 @@ class RatchetioComponent extends CApplicationComponent
 	public $baseApiUrl;
 
 	public function init() {
-		Yii::import("ext.ratchetio.Ratchetio");
+		Yii::import("ext.yiiext.components.ratchetio.Ratchetio");
 		Ratchetio::init(array(
 			'access_token' => $this->accessToken,
 			'environment' => $this->environment,
