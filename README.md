@@ -21,6 +21,13 @@ Installation
 
   `'preload'=>array('log', 'ratchetio'),`
 
-3. Done!
+3. Set RatchetioErrorHandler as error handler:
+
+  ~~~
+  'errorHandler'=>array(
+    'class'=>'ext.yiiext.components.ratchetio.RatchetioErrorHandler',
+    'errorAction'=>'site/error', # or some another value
+  ),
+  ~~~
 
 You can also pass some additional ratchet.io options in the component config, such as `environment`, `branch`, `maxErrno` or `baseApiUrl` etc.

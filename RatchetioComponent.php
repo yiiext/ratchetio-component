@@ -1,4 +1,6 @@
 <?php
+Yii::import("ext.yiiext.components.ratchetio.Ratchetio");
+
 class RatchetioComponent extends CApplicationComponent
 {
 	public $accessToken;
@@ -12,7 +14,6 @@ class RatchetioComponent extends CApplicationComponent
 	public $baseApiUrl;
 
 	public function init() {
-		Yii::import("ext.yiiext.components.ratchetio.Ratchetio");
 		Ratchetio::init(array(
 			'access_token' => $this->accessToken,
 			'environment' => $this->environment,
@@ -23,7 +24,7 @@ class RatchetioComponent extends CApplicationComponent
 			'logger' => $this->logger,
 			'max_errno' => $this->maxErrno,
 			'base_api_url' => $this->baseApiUrl
-		));
+		), false, false);
 
 		parent::init();
 	}
