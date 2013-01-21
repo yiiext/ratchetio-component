@@ -1,7 +1,7 @@
 Ratchetio
 =======================
 
-Ratcherio Component is the way to integrate [ratchet.io](http://ratchet.io/) service with our Yii app. NB: Ratchet monitors and analyzes your app's errors and deploys.
+Ratchetio Component is the way to integrate [ratchet.io](http://ratchet.io/) service with our Yii app. NB: Ratchet monitors and analyzes your app's errors and deploys.
 
 Installation
 ------------
