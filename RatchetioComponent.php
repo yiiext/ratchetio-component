@@ -1,5 +1,5 @@
 <?php
-Yii::import("ext.yiiext.components.ratchetio.Ratchetio");
+require_once 'ratchetio.php';
 
 class RatchetioComponent extends CApplicationComponent
 {
