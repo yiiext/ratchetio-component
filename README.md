@@ -27,7 +27,7 @@ Installation
 3. Adjust `main.php` config to preload the component:
 
 ```php
-`'preload'=>array('log', 'ratchetio'),`
+'preload'=>array('log', 'ratchetio'),
 ```
 
 4. Set `RatchetioErrorHandler` as error handler:
@@ -37,10 +37,12 @@ Installation
 	// ...
 	'errorHandler'=>array(
 		'class'=>'ext.yiiext.components.ratchetio.RatchetioErrorHandler',
+		'phpErrorsToRatchetio' => true,
 		// ...
 	),
 ),
 ```
+Set phpErrorsToRatchetio param in errorHandler component if you want send PHP errors to ratchet.io.
 
 You can also pass some additional ratchet.io options in the component config:
 `environment`, `branch`, `maxErrno`, `baseApiUrl` etc.
