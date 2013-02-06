@@ -3,13 +3,6 @@ require_once 'ratchetio.php';
 
 class RatchetioErrorHandler extends CErrorHandler
 {
-	/**
-	 * Send PHP Errors to Ratchetio
-	 *
-	 * @var bool
-	 */
-	public $phpErrorsToRatchetio = false;
-
 	protected function handleException($exception)
 	{
 		$ignored = ($exception instanceof CHttpException && $exception->statusCode == 404);
@@ -22,9 +15,7 @@ class RatchetioErrorHandler extends CErrorHandler
 
 	protected function handleError($event)
 	{
-		if ($this->phpErrorsToRatchetio) {
-			Ratchetio::report_php_error($event->code, $event->message, $event->file, $event->line);
-		}
+		Ratchetio::report_php_error($event->code, $event->message, $event->file, $event->line);
 
 		parent::handleError($event);
 	}

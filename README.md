@@ -37,12 +37,10 @@ Installation
 	// ...
 	'errorHandler'=>array(
 		'class'=>'ext.yiiext.components.ratchetio.RatchetioErrorHandler',
-		'phpErrorsToRatchetio' => true,
 		// ...
 	),
 ),
 ```
-Set phpErrorsToRatchetio param in errorHandler component if you want send PHP errors to ratchet.io.
 
 You can also pass some additional ratchet.io options in the component config:
 `environment`, `branch`, `maxErrno`, `baseApiUrl` etc.
