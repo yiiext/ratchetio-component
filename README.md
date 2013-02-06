@@ -27,7 +27,7 @@ Installation
 3. Adjust `main.php` config to preload the component:
 
 ```php
-`'preload'=>array('log', 'ratchetio'),`
+'preload'=>array('log', 'ratchetio'),
 ```
 
 4. Set `RatchetioErrorHandler` as error handler:
