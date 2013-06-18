@@ -12,6 +12,7 @@ class RatchetioComponent extends CApplicationComponent
 	public $logger;
 	public $maxErrno;
 	public $baseApiUrl;
+	public $rootAlias = 'application';
 
 	public function init() {
 		Ratchetio::init(array(
@@ -23,7 +24,8 @@ class RatchetioComponent extends CApplicationComponent
 			'timeout' => $this->timeout,
 			'logger' => $this->logger,
 			'max_errno' => $this->maxErrno,
-			'base_api_url' => $this->baseApiUrl
+			'base_api_url' => $this->baseApiUrl,
+			'root' => !empty($this->rootAlias) ? Yii::getPathOfAlias($this->rootAlias) : '',
 		), false, false);
 
 		parent::init();
