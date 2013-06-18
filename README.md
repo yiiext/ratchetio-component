@@ -50,3 +50,8 @@ A good idea is to specify `environment` as:
 ```php
 'environment' => isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'cli_'.php_uname("n"),
 ```
+
+You can specify alias of your project root directory for linking stack traces (`'application'` by default):
+```php
+'rootAlias' => 'root',
+```
